@@ -20,10 +20,12 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Google Format
-      uses: axel-op/googlejavaformat-action@v3
+    - uses: axel-op/googlejavaformat-action@v3
       with:
-        args: "--skip-sorting-imports --replace"
+          args: "--replace"
+          skip-commit: true
+    - name: Print diffs
+      run: git --no-pager diff --exit-code
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
