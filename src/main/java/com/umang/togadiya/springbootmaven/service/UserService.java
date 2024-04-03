@@ -1,6 +1,11 @@
 package com.umang.togadiya.springbootmaven.service;
 
 import com.umang.togadiya.springbootmaven.model.UserModel;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.TimeZone;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -11,6 +16,7 @@ public class UserService {
     }
 
     public UserModel getUserInformation() {
-        return UserModel.builder().name("Umang").email("umang@gmail.com").build();
+        final UserModel oneUser = UserModel.builder().name("Umang").email("umang@gmail.com").build();
+        return oneUser;
     }
 }

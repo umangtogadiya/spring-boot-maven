@@ -1,0 +1,15 @@
+spring:
+  application:
+      name: spring-boot-maven
+app:
+  scheduling:
+    enable: false
+
+management:
+  health:
+    livenessState:
+      enabled: false
+    readinessState:
+      enabled: false
+    warmUp:
+      enabled: false
