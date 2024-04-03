@@ -2,6 +2,7 @@ package com.umang.togadiya.springbootmaven.controller;
 
 import com.umang.togadiya.springbootmaven.model.UserModel;
 import com.umang.togadiya.springbootmaven.service.UserService;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

@@ -8,5 +8,4 @@ class SpringBootMavenApplicationTests {
 
     @Test
     void contextLoads() {}
-
 }

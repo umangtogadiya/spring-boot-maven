@@ -1,6 +1,7 @@
 package com.umang.togadiya.springbootmaven.service;
 
 import com.umang.togadiya.springbootmaven.model.UserModel;
+
 import org.springframework.stereotype.Service;
 
 @Service
