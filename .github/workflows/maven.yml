@@ -22,12 +22,14 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - name: Lint Code Base
-      uses: github/super-linter@v4
-      env:
-        VALIDATE_JAVA: true
-        DEFAULT_BRANCH: "main"
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Set up Google Java Format
+      run: |
+        export JAVA_HOME="${RUNNER_TEMP}/adoptopenjdk-11-hotspot"
+        curl -L https://github.com/google/google-java-format/releases/download/google-java-format-1.10/google-java-format-1.10-all-deps.jar -o google-java-format.jar
+
+    - name: Check code formatting
+      run: |
+        java -jar google-java-format.jar --set-exit-if-changed --aosp --style google-java-format.xml $(find . -name '*.java')
 
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v6
