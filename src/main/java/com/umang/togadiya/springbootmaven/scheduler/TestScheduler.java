@@ -11,5 +11,4 @@ public class TestScheduler {
     public void keepConnectionsAlive() {
         System.out.println("Called At :");
     }
-
 }
