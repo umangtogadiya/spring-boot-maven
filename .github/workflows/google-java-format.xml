@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<settings>
+    <!-- Indentation style -->
+    <style>
+        <indent>SPACES</indent>
+        <spaces>4</spaces>
+    </style>
+
+    <!-- Line wrapping -->
+    <maxLineLength>120</maxLineLength>
+
+    <!-- Imports -->
+    <orderImports>true</orderImports>
+
+    <!-- Arrays -->
+    <arrayInitializerStyle>ONE_DIMENSIONAL</arrayInitializerStyle>
+
+    <!-- Align parameters -->
+    <alignMethodParameters>true</alignMethodParameters>
+
+    <!-- Other formatting rules -->
+    <formatJavadoc>true</formatJavadoc>
+    <insertFinalModifierForParameters>true</insertFinalModifierForParameters>
+    <useTab>true</useTab>
+    <!-- Add more custom rules as needed -->
+</settings>
